@@ -1,0 +1,7 @@
+- start with class file
+- create a database
+- add information from website into database
+- have fetch function handle AJAX request
+    -if it doesn't work have an error show
+- if AJAX is successful have the response data show
+- add sass files and build out the one page

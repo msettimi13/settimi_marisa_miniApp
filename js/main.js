@@ -7,12 +7,12 @@ import ProfCard from "./components/TheProfCard.js";
         
         data: {
             message: "SELECT YOUR MODEL:",
-            anotherMessage: "",
             removeAformat: true,
-            showBioData: false,
+            showData: false,
             professors: [],
             currentProfData: {}
         }, 
+
 
         //this is the mounted lifecycle hook. Vue is done creating itself, and has attached itself to the "app" div on the page
         mounted: function() {
@@ -32,7 +32,7 @@ import ProfCard from "./components/TheProfCard.js";
 
         methods: {
             logClicked() {
-                console.log("clicked on a prof name");
+                console.log("clicked on a car name");
             },
 
             clickHeader() {
@@ -40,8 +40,9 @@ import ProfCard from "./components/TheProfCard.js";
             },
 
             showProfData(target) {
+                debugger;
                 // remove this prof from the professors array
-                console.log('click to view prof bio data ', target, target.name);
+                console.log('click to view car data ', target, target.name);
                 // the "this" keyword inside a vue instance REFERS to the vue instance itself by default
                 this.showBioData = this.showBioData ? false: true;
 
@@ -60,8 +61,6 @@ import ProfCard from "./components/TheProfCard.js";
             }
         },
 
-        components: {
-            "prof-card": ProfCard
-        }
+
     }).$mount("#app");
 })();   

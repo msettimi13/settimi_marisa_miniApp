@@ -1,0 +1,15 @@
+.headerContainer {
+    width: 100%;
+}
+
+.headerLogo {
+    width: 10%;
+    padding-top: 2em;
+}
+
+.nav li {
+    list-style-type: none;
+    font-family: $mainFont;
+    display: inline;
+    padding-left: 6em;
+}
