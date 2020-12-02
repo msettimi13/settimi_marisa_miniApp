@@ -14,7 +14,7 @@ export default {
     },
 
     template: `<li @click="logClicked">
-                    <img :src="'images/' + prof.photo" :alt='prof.name + " image"'>
+                    <img :src="'images/' + prof.avatar" :alt='prof.name + " image"'>
                     <p>Prof Name: {{ prof.name }}</p>
                     <a href="" class="remove-prof">Show {{ prof.name }}'s info</a>
                     <a href="" class="remove-prof">Remove {{ prof.name }}</a>
@@ -27,6 +27,7 @@ export default {
     methods: {
         logClicked() {
             console.log(`fired from inside ${this.prof.name}'s component`);
+            this.$emit("showmydata", this.prof);
         }
     }
 }
